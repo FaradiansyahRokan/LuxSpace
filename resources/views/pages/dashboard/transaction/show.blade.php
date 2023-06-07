@@ -65,7 +65,12 @@
                <div class="shadow overflow-hidden sm:rounded-lg">
                 <div class="text-white p-6 border-b border-gray-200">
                     <table class="table-auto w-full">
-                        
+                        <tbody>
+                            <tr>
+                                <th class="border px-4 py-4 text-right">Name</th>
+                                <td class="border px-4 py-4 text-right"></td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
                </div>
