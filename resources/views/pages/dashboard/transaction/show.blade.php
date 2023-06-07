@@ -59,7 +59,15 @@
 
     <div class="py-1">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-               <h2 class="font-semibold text-lg text-gray-800 text-leading-tight mb-5"></h2>
+               <h2 class="font-semibold text-lg text-gray-800 text-leading-tight mb-5">
+                Transaction Detail
+               </h2>
+               <div class="shadow overflow-hidden sm:rounded-lg">
+                <div class="text-white p-6 border-b border-gray-200"></div>
+               </div>
+               <h2 class="font-semibold text-lg text-gray-800 text-leading-tight mb-5">
+                Transaction Items
+               </h2>
                 <div class="shadow overflow sm-rounded md">
                     <div class="bg-white sm:p-6">
                         <table id="crudTable">
