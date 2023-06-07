@@ -60,7 +60,15 @@
                 <div class="flex flex-wrap -mx-3 mb-4">
                     <div class="w-full px-3">
                         <label  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Title</label>
-                        <input type="text" value="{{old('title') ?? $product->title}}" name="title"  placeholder="Product Name" class="block w-full bg-gray-200 text-black-700 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-none">
+                        <select name="status" id="" class="block w-full bg-gray-200 text-black-700 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-none">
+                            <option value="{{ $item->status}}">{{ $item->status}}</option>
+                            <option disabled>------------</option>
+                            <option value="PENDING">PENDING</option>
+                            <option value="SUCCESS">SUCCESS</option>
+                            <option value="FAILED">FAILED</option>
+                            <option value="SHIPPING">SHIPPING</option>
+                            <option value="SHIPPED">SHIPPED</option>
+                        </select>
                     </div>
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-4">

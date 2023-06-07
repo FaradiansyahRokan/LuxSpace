@@ -27,8 +27,10 @@ Route::get('/checkout/success', [FrontEndController::class, 'success'])->name('c
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified', 'IsAdmin'])->name('dashboard.')->prefix('dashboard')->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('index');
     Route::resource('product', ProductController::class);
-    Route::resource('transaction' , TransactionController::class);
     Route::resource('product.gallery', ProductGalleryController::class)->shallow()->only([
         'index', 'create', 'store', 'destroy'
+    ]);
+    Route::resource('transaction' , TransactionController::class)->only([
+        'index' , 'show' , 'edit' , 'update'
     ]);
 });
