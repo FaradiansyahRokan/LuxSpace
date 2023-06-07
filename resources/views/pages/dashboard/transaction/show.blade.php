@@ -63,12 +63,16 @@
                 Transaction Detail
                </h2>
                <div class="shadow overflow-hidden sm:rounded-lg">
-                <div class="text-white p-6 border-b border-gray-200"></div>
+                <div class="text-white p-6 border-b border-gray-200">
+                    <table class="table-auto w-full">
+                        
+                    </table>
+                </div>
                </div>
                <h2 class="font-semibold text-lg text-gray-800 text-leading-tight mb-5">
                 Transaction Items
                </h2>
-                <div class="shadow overflow sm-rounded md">
+                <div class="shadow overflow sm-rounded-lg">
                     <div class="bg-white sm:p-6">
                         <table id="crudTable">
                             <thead>
