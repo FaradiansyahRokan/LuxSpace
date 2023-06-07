@@ -83,7 +83,7 @@
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-4">
                     <div class="w-full px-3">
-                        <button type="submit" class="bg-pink-200 text-black-700 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-none hover:bg-pink-400">Submit</button>
+                        <button type="submit" class="bg-pink-200 text-black-700 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-none hover:bg-pink-400">Update User</button>
                     </div>
                 </div>
                     </div>
