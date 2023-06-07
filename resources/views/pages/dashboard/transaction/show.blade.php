@@ -63,12 +63,36 @@
                 Transaction Detail
                </h2>
                <div class="shadow overflow-hidden sm:rounded-lg">
-                <div class="text-white p-6 border-b border-gray-200">
+                <div class="text-black p-6 border-b border-gray-200">
                     <table class="table-auto w-full">
                         <tbody>
                             <tr>
                                 <th class="border px-4 py-4 text-right">Name</th>
-                                <td class="border px-4 py-4 text-right"></td>
+                                <td class="border px-4 py-4 text-right">{{ $transaction->name}}</td>
+                            </tr>
+                            <tr>
+                                <th class="border px-4 py-4 text-right">Email</th>
+                                <td class="border px-4 py-4 text-right">{{ $transaction->email}}</td>
+                            </tr>
+                            <tr>
+                                <th class="border px-4 py-4 text-right">Payment</th>
+                                <td class="border px-4 py-4 text-right">{{ $transaction->payment}}</td>
+                            </tr>
+                            <tr>
+                                <th class="border px-4 py-4 text-right">Courier</th>
+                                <td class="border px-4 py-4 text-right">{{ $transaction->courrier}}</td>
+                            </tr>
+                            <tr>
+                                <th class="border px-4 py-4 text-right">Payment_url</th>
+                                <td class="border px-4 py-4 text-right">{{ $transaction->payment_url}}</td>
+                            </tr>
+                            <tr>
+                                <th class="border px-4 py-4 text-right">Total Price</th>
+                                <td class="border px-4 py-4 text-right">{{ $transaction->total_price}}</td>
+                            </tr>
+                            <tr>
+                                <th class="border px-4 py-4 text-right">Status</th>
+                                <td class="border px-4 py-4 text-right">{{ $transaction->status}}</td>
                             </tr>
                         </tbody>
                     </table>
