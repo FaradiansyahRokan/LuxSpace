@@ -107,7 +107,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Nama Produk</th>
+                                    <th>Nama</th>
                                     <th>Harga</th>
                                 </tr>
                             </thead>

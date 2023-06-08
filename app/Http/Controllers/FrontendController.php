@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Products;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function index(Request $request){
-        return view('pages.frontend.index');
+        $products = Products::with(['galleries'])->latest()->get();
+        return view('pages.frontend.index' , compact('compact'));
     }
 
     public function details(Request $request , $slug){
