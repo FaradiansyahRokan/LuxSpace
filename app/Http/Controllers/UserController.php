@@ -19,7 +19,7 @@ class UserController extends Controller
             return DataTables::of($query)->addColumn('action', function($item){
                 return '
                 <a href = "'.route('dashboard.user.edit', $item->id). '" class = "bg-pink-400 hover:bg-white hover:text-pink-500 text-white font-bold py-2 px-4 row shadow-lg rounded " >Edit</a>
-                <form class = "inline-block" method = "POST" action = "'.route('dashboard.product.destroy', $item).'">
+                <form class = "inline-block" method = "POST" action = "'.route('dashboard.user.destroy', $item).'">
                 '.method_field('delete'). csrf_field(). '
                 <button class = "bg-indigo-400 hover:bg-white hover:text-indigo-500 text-white font-bold py-2 px-4 mx-2 row shadow-lg rounded py-1.5 " type = "submit" >Delete</button>
                 </form>';
@@ -79,8 +79,10 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('dashboard.user.index');
     }
 }
