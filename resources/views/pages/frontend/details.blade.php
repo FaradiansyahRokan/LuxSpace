@@ -9,7 +9,7 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-            a href="#">Office Room</a>
+            <a href="#">Office Room</a>
             </li>
             <li>
               <a href="#" aria-label="current-page">Details</a>
@@ -29,66 +29,20 @@
           <div class="flex-1">
             <div class="slider">
               <div class="thumbnail">
+                @foreach ($products->gallery as $item)
                 <div class="px-2">
                   <div
-                    class="item selected"
-                    data-img="frontend/images/content/showcase-1.front.jpg"
+                    class="item {{ $loop->first ? 'selected' : '' }}"
+                    data-img="{{ Storage::url($item->url)}}"
                   >
                     <img
-                      src="/frontend/images/content/showcase-1.front.jpg"
+                      src="{{ Storage::url($item->url)}}"
                       alt="front"
                       class="object-cover w-full h-full rounded-lg"
                     />
                   </div>
                 </div>
-                <div class="px-2">
-                  <div
-                    class="item"
-                    data-img="/frontend/images/content/showcase-1.back.jpg"
-                  >
-                    <img
-                      src="/frontend/images/content/showcase-1.back.jpg"
-                      alt="back"
-                      class="object-cover w-full h-full rounded-lg"
-                    />
-                  </div>
-                </div>
-                <div class="px-2">
-                  <div
-                    class="item"
-                    data-img="/frontend/images/content/showcase-1.rear.jpg"
-                  >
-                    <img
-                      src="/frontend/images/content/showcase-1.rear.jpg"
-                      alt="rear"
-                      class="object-cover w-full h-full rounded-lg"
-                    />
-                  </div>
-                </div>
-                <div class="px-2">
-                  <div
-                    class="item"
-                    data-img="/frontend/images/content/showcase-1.side.jpg"
-                  >
-                    <img
-                      src="/frontend/images/content/showcase-1.side.jpg"
-                      alt="side"
-                      class="object-cover w-full h-full rounded-lg"
-                    />
-                  </div>
-                </div>
-                <div class="px-2">
-                  <div
-                    class="item"
-                    data-img="/frontend/images/content/showcase-1.top.jpg"
-                  >
-                    <img
-                      src="/frontend/images/content/showcase-1.top.jpg"
-                      alt="top"
-                      class="object-cover w-full h-full rounded-lg"
-                    />
-                  </div>
-                </div>
+                @endforeach
               </div>
               <div class="preview">
                 <div class="item rounded-lg h-full overflow-hidden">

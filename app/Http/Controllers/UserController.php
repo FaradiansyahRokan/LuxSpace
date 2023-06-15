@@ -75,7 +75,7 @@ class UserController extends Controller
 
         return redirect()->route('dashboard.user.index');
     }
-
+    
     /**
      * Remove the specified resource from storage.
      */

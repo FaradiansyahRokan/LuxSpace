@@ -60,6 +60,7 @@ class ProductGalleryController extends Controller
                 ]);
             }
         }
+        
 
         return redirect()->route('dashboard.product.gallery.index', $product->id);
     }

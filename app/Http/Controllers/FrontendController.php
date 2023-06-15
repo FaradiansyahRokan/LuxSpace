@@ -8,12 +8,13 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
     public function index(Request $request){
-        $products = Products::with(['galleries'])->latest()->get();
-        return view('pages.frontend.index' , compact('compact'));
+        $products = Products::with(['gallery'])->latest()->get();
+        return view('pages.frontend.index' , compact('products'));
     }
 
     public function details(Request $request , $slug){
-        return view('pages.frontend.details');
+        $products = Products::with(['gallery'])->where('slug' , $slug)->firstOrFail();
+        return view('pages.frontend.details', compact('products'));
     }
 
     

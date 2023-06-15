@@ -190,13 +190,13 @@
                   </div>
                 </div>
                 <img
-                  src="/frontend/images/content/image-arrived-1.png"
+                  src="{{ $product->gallery() ? Storage::url($product->gallery->first()) : 'data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==' }}"
                   alt=""
                   class="w-full h-full object-cover object-center"
                 />
               </div>
-              <h5 class="text-lg font-semibold mt-4">{{ $product->name}}</h5>
-              <span class="">{{ number_format($product->price)}}</span>
+              <h5 class="text-lg font-semibold mt-4">{{ $product->title}}</h5>
+              <span class="">IDR {{ number_format($product->price)}}</span>
               <a href="{{ route('details' , $product->slug)}}" class="stretched-link">
                 <!-- fake children -->
               </a>
